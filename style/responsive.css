@@ -18,9 +18,7 @@
     font-size: 55%;
   }
   /* hero-section  */
-  .home .container {
-    padding-top: 20rem;
-  }
+
   /* hero-section  */
 }
 
@@ -205,12 +203,19 @@
     font-size: 48%;
   }
   header {
-    padding: 20px 30px;
+    padding: 8px 30px;
   }
   .home .home-right {
     width: 100%;
     margin: 0 auto;
   }
+  .home .home-left h1 {
+    font-size: 2.5rem;
+  }
+  .home .home-left h2 {
+    font-size: 3.5rem;
+  }
+
   .section-main h1 {
     font-size: 50px;
     line-height: 60px;
@@ -222,10 +227,15 @@
   }
   /* service  */
 }
-
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
   html {
     font-size: 45%;
+  }
+  .home .home-left h1 {
+    font-size: 2.5rem;
+  }
+  .home .home-left h2 {
+    font-size: 3.5rem;
   }
 }
