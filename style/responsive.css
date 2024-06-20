@@ -27,10 +27,55 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   /* hero-section  */
-  .home .container {
-    padding-top: 24rem;
+  html {
+    font-size: 59%;
+  }
+  /* navbar  */
+  header {
+    padding: 20px 65px;
+  }
+  header .btn {
+    display: block;
+  }
+
+  header .menu.active {
+    right: 0;
+  }
+
+  header .menu {
+    position: fixed;
+    background: #6c63ff;
+    flex-direction: column;
+    min-width: 300px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 80px 50px;
+    transition-property: right;
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+      rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  }
+
+  header .menu .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  header .menu a {
+    display: block;
+    font-size: 16px;
+    margin: 20px;
+    padding: 0 15px;
   }
   /* hero-section  */
+
+  /* services  */
+  .Services-card-heading h3 {
+    font-size: 2rem;
+  }
 }
 
 /* Small Devices, Tablets */
@@ -90,22 +135,68 @@
   .home-left {
     order: 1;
   }
-  .home .container {
-    padding-top: 15rem;
+  .home .home-left h2 {
+    font-size: 4.5rem;
   }
   .home .home-right {
     width: 50%;
     margin: 0 auto;
   }
   /* hero-section  */
+
+  /* services */
+  .Services-heading h3 {
+    font-size: 2.5rem;
+  }
+  .Services-heading h2 {
+    font-size: 5rem;
+  }
   /* about section  */
   .about .about-box {
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
   }
   /* about section  */
+  /* service  */
 
   /* feature section  */
+  .feature .feature-heading {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--black-color);
+  }
+  .feature-text1 {
+    order: 1;
+  }
+  .feature-img1 {
+    order: 2;
+  }
+  .feature-img2 {
+    order: 4;
+  }
+  .feature-text2 {
+    order: 3;
+  }
+  .feature-text-3 {
+    order: 8;
+  }
+  .feature-img-3 {
+    order: 10;
+    margin-top: 0rem;
+  }
+  /* why important webste  */
+  .important-web-img {
+    margin: 0 auto;
+  }
+
+  /* contact  */
+  .contact-field {
+    order: 2;
+  }
+  /* footer  */
+  .footer-right {
+    text-align: left;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -116,18 +207,25 @@
   header {
     padding: 20px 30px;
   }
+  .home .home-right {
+    width: 100%;
+    margin: 0 auto;
+  }
   .section-main h1 {
     font-size: 50px;
     line-height: 60px;
   }
   /* about section  */
   .about .about-box {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
-  /* about section  */
+  /* service  */
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
+  html {
+    font-size: 45%;
+  }
 }

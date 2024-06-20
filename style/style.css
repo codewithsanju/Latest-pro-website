@@ -14,6 +14,7 @@ html {
   -ms-scroll-snap-type: Y proximity;
   scroll-snap-type: Y proximity;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   overflow-x: hidden;
@@ -282,11 +283,13 @@ header {
   padding: 2rem 10rem;
   z-index: 999;
   transition: 0.6s;
+  background-color: #14212b3b;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 header.sticky {
   background-color: var(--bg-color);
-  padding: 1.5rem 10rem;
+  padding: 1.5rem 6rem;
 }
 
 header .menu {
@@ -337,6 +340,7 @@ header .btn {
 .home .grid {
   align-items: center;
   gap: 5rem;
+  min-height: 100vh;
 }
 
 .home .home-left h1 {
@@ -359,30 +363,96 @@ header .btn {
   font-weight: 500;
 }
 /********** hero right css  **********/
-.home .home-right {
-  transform: scalex(-1);
-}
 
-#bar {
-  animation: bar 2s linear infinite;
-  transform-origin: center;
+#homeBar1 {
+  animation: bar1 4s linear infinite;
+  transform-origin: left;
   transform-box: fill-box;
 }
-@keyframes bar {
+@keyframes bar1 {
   0% {
     transform: scaleX(0.8);
   }
 
+  50% {
+    transform: scaleX(1);
+  }
+
   100% {
-    transform: scaleX(1.5);
+    transform: scaleX(0.8);
   }
 }
 
+/* bar 2  */
+
+#homeBar2 {
+  animation: bar2 5s linear infinite;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+@keyframes bar2 {
+  0% {
+    transform: scaleX(0.5);
+  }
+
+  50% {
+    transform: scaleX(2);
+  }
+
+  100% {
+    transform: scaleX(0.5);
+  }
+}
+/* bar 3  */
+
+#homeBar3 {
+  animation: bar3 3s linear infinite;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+@keyframes bar3 {
+  0% {
+    transform: scaleX(0.2);
+  }
+
+  50% {
+    transform: scaleX(0.8);
+  }
+
+  100% {
+    transform: scaleX(0.2);
+  }
+}
+/* bar 3  */
+
+#homeBar4 {
+  animation: bar4 2s linear infinite;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+@keyframes bar4 {
+  0% {
+    transform: scaleX(0.1);
+  }
+
+  50% {
+    transform: scaleX(0.4);
+  }
+
+  100% {
+    transform: scaleX(0.1);
+  }
+}
 /********************* about section css  *********************/
 .about {
   position: relative;
 }
-
+.about .container {
+  padding-bottom: 3rem;
+}
+.about .about-heading {
+  padding-bottom: 0rem;
+}
 .about .grid {
   gap: 2rem;
   align-items: center;
@@ -532,8 +602,13 @@ header .btn {
 .Services {
   position: relative;
 }
-
-.Services .grid {
+#Services-main .container {
+  padding-bottom: 3rem;
+}
+#Services-main .grid {
+  gap: 5rem;
+}
+#Services .grid {
   gap: 3rem;
 }
 .Services-heading {
@@ -553,10 +628,10 @@ header .btn {
 .Services-card-data {
   /* border: 1px solid var(--bg-color); */
   background-color: var(--black-color);
-  padding: 4rem 5rem;
+  padding: 4rem 2rem;
   text-align: center;
   width: 100%;
-  height: 100%;
+  height: auto;
   /* box-shadow: 0 5px 5px 5px rgba(13, 110, 253, 0.2); */
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   animation: bordermove 5s ease-in-out infinite;
@@ -599,6 +674,9 @@ header .btn {
 .feature {
   position: relative;
 }
+.feature .container {
+  padding-bottom: 3rem;
+}
 .feature .grid {
   gap: 5rem;
   align-items: center;
@@ -611,7 +689,7 @@ header .btn {
 
 /* feature main section  */
 /* feature img 1  */
-.feature .feature-img .domian-one {
+.feature .feature-img1 .domian-one {
   position: absolute;
   -webkit-animation-name: movebounce;
   animation-name: movebounce;
@@ -658,8 +736,9 @@ header .btn {
 }
 
 /* feature img 2  */
-.feature .feature-img .hosting-one {
+.feature .feature-img2 .hosting-one {
   position: absolute;
+
   -webkit-animation-name: movelr;
   animation-name: movelr;
   -webkit-animation-delay: 100ms;
@@ -706,7 +785,7 @@ header .btn {
 
 /* feature img 3  */
 
-.feature .feature-img .dynamic-one {
+.feature .feature-img-3 .dynamic-one {
   position: absolute;
 
   -webkit-animation-name: movebounce;
@@ -753,7 +832,7 @@ header .btn {
   }
 }
 /* ________________ */
-.feature .feature-img .dynamic-two {
+.feature .feature-img-3 .dynamic-two {
   -webkit-animation-name: movebounce;
   animation-name: movebounce;
   -webkit-animation-delay: 100ms;
@@ -797,20 +876,37 @@ header .btn {
     transform: translateY(0);
   }
 }
-.feature .feature-text h4 {
+.feature .feature-text1 h4 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+.feature .feature-text2 h4 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+.feature .feature-text-3 h4 {
   margin-bottom: 2rem;
   font-size: 3rem;
 }
 .feature .feature-text h4 .feature-domain {
   color: var(--bg-color);
 }
-.feature .feature-text p {
+.feature .feature-text1 p {
+  font-size: 1.5rem;
+}
+.feature .feature-text2 p {
+  font-size: 1.5rem;
+}
+.feature .feature-text-3 p {
   font-size: 1.5rem;
 }
 
 /*************** why choose us section  ***************/
 .choose {
   background-color: var(--bg-color);
+}
+.choose .container {
+  padding-bottom: 3rem;
 }
 .choose .choose-heading {
   text-align: center;
@@ -843,10 +939,12 @@ header .btn {
   padding: 0.5rem;
 }
 .testimonial-card .test-card-body {
-  background-color: var(--card-clr);
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
-  padding: 5rem;
-  border-radius: 1rem;
+  background-color: #433ad4;
+  /* box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12); */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  padding: 2rem;
+  border-radius: 2rem;
 }
 .test-card-body .quote {
   display: flex;
@@ -859,13 +957,13 @@ header .btn {
 }
 .quote h2 {
   color: var(--white-color);
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .test-card-body p {
   margin: 10px 0px 15px;
   font-size: 1.8rem;
   line-height: 1.5;
-  color: var(--black-color);
+  color: var(--white-color);
 }
 
 .testimonial-card .profile {
@@ -929,9 +1027,199 @@ header .btn {
   margin-top: 15px;
 }
 .owl-dots .owl-dot span {
-  background-color: #434753;
+  background-color: #1540c0;
   padding: 6px;
 }
 .owl-dot .active span {
-  background-color: var(--main-color);
+  background-color: var(--white-color);
+}
+
+/********************* why important website  *********************/
+.important-web {
+  position: relative;
+}
+.important-web .grid {
+  align-items: center;
+  gap: 5rem;
+}
+.important-web-img {
+  /* border: 1px solid var(--bg-color); */
+  background-color: var(--black-color);
+  padding: 4rem 5rem;
+  text-align: center;
+
+  box-shadow: 0 5px 5px 5px rgba(13, 110, 253, 0.2);
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  animation: bordermove 5s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+}
+
+/* important text section  */
+
+.important-web .important-web-text h4 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: var(--black-color);
+}
+
+.important-web .important-web-text p {
+  font-size: 1.5rem;
+}
+
+/************************ contact us  ************************/
+.contacts {
+  background-color: var(--bg-color);
+}
+.contacts .container {
+  padding-bottom: 3rem;
+}
+
+.contact-img {
+  /* border: 1px solid var(--bg-color); */
+  background-color: var(--black-color);
+  padding: 4rem 5rem;
+  text-align: center;
+
+  box-shadow: 0 5px 5px 5px rgba(13, 110, 253, 0.2);
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  animation: bordermove 5s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+}
+
+.contact-img {
+  background-color: var(--white-color);
+
+  animation: bordermove 5s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+}
+
+.contacts .contact-heading {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--white-color);
+}
+/* contact main section  */
+.contacts .grid {
+  gap: 5rem;
+}
+.form-heading .grid {
+  /* align-items: center; */
+  text-align: center;
+}
+.form-field .container {
+  padding: 0;
+}
+.form-field .grid {
+  gap: 10rem;
+  align-items: center;
+}
+input {
+  width: 100%;
+  padding: 2.5rem 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid var(--main-color);
+  outline: none;
+  border-radius: 1rem;
+}
+
+select {
+  border: none;
+  width: 100%;
+  padding: 2.5rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  background-color: var(--white-color);
+}
+
+select option {
+}
+select:focus {
+  outline: none;
+}
+
+.contact-btn {
+  text-align: center;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 2.5rem 5rem;
+  font-size: 2rem;
+  border: 1px solid var(--black-color);
+  outline: none;
+  border-radius: 1rem;
+  background-color: var(--black-color);
+  cursor: pointer;
+  color: var(--white-color);
+}
+
+/**************** footer  ***************/
+
+.footer .grid {
+  gap: 5rem;
+}
+.footer .footer-left p {
+  font-size: 1.5rem;
+}
+.footer-right {
+  text-align: center;
+}
+.footer .footer-right h3 {
+  font-size: 3rem;
+  color: var(--black-color);
+}
+.footer .footer-right a {
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  transition: 0.3s ease-in-out;
+}
+
+.footer .footer-right a p {
+  padding: 1rem 0;
+  /* text-align: left; */
+}
+
+/* last footer */
+
+.sub-footer {
+  background-color: var(--bg-color);
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--black-color);
+}
+.sub-footer h2 {
+  font-weight: 500;
+}
+#last-footer {
+  color: var(--white-color);
+}
+
+/* click to top button   */
+#scrollToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  width: 5rem; /* Some padding */
+  height: 5rem;
+  border-radius: 50%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  /* border: 1px solid var(--bg-color); */
+  background-color: #433bc9;
+  text-align: center;
+
+  box-shadow: 0 5px 5px 5px rgba(13, 110, 253, 0.2);
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  animation: bordermove 5s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333; /* Darker background on hover */
 }
