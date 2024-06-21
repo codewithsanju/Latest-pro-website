@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @media only screen and (max-width: 1600px) {
   html {
     font-size: 60%;
@@ -28,6 +35,14 @@
   html {
     font-size: 59%;
   }
+  .grid-two--cols {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .grid-three--cols {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
   /* navbar  */
   header {
     padding: 20px 65px;
@@ -43,14 +58,23 @@
   header .menu {
     position: fixed;
     background: #6c63ff;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     min-width: 300px;
     height: 100vh;
     top: 0;
     right: -100%;
     padding: 80px 50px;
+    -webkit-transition-property: right;
+    -o-transition-property: right;
     transition-property: right;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+      rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
       rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   }
@@ -69,10 +93,51 @@
     padding: 0 15px;
   }
   /* hero-section  */
-
+  .home-left {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
   /* services  */
   .Services-card-heading h3 {
     font-size: 2rem;
+  }
+  /* feature section  */
+  .feature .feature-heading {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--black-color);
+  }
+  .feature-text1 {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .feature-img1 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .feature-img2 {
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
+    order: 4;
+  }
+  .feature-text2 {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+  .feature-text-3 {
+    -webkit-box-ordinal-group: 9;
+    -ms-flex-order: 8;
+    order: 8;
+  }
+  .feature-img-3 {
+    -webkit-box-ordinal-group: 11;
+    -ms-flex-order: 10;
+    order: 10;
+    margin-top: 0rem;
   }
 }
 
@@ -96,14 +161,23 @@
   header .menu {
     position: fixed;
     background: #6c63ff;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     min-width: 300px;
     height: 100vh;
     top: 0;
     right: -100%;
     padding: 80px 50px;
+    -webkit-transition-property: right;
+    -o-transition-property: right;
     transition-property: right;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+      rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
       rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   }
@@ -124,13 +198,17 @@
   /* navbar  */
   /* hero-section  */
   .grid-two--cols {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
   .grid-three--cols {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 
   .home-left {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
   }
   .home .home-left h2 {
@@ -164,21 +242,33 @@
     color: var(--black-color);
   }
   .feature-text1 {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
   }
   .feature-img1 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
   }
   .feature-img2 {
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
     order: 4;
   }
   .feature-text2 {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
     order: 3;
   }
   .feature-text-3 {
+    -webkit-box-ordinal-group: 9;
+    -ms-flex-order: 8;
     order: 8;
   }
   .feature-img-3 {
+    -webkit-box-ordinal-group: 11;
+    -ms-flex-order: 10;
     order: 10;
     margin-top: 0rem;
   }
@@ -189,6 +279,8 @@
 
   /* contact  */
   .contact-field {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
   }
   /* footer  */
@@ -205,6 +297,9 @@
   header {
     padding: 8px 30px;
   }
+  .home .grid {
+    gap: 0rem;
+  }
   .home .home-right {
     width: 100%;
     margin: 0 auto;
@@ -219,6 +314,11 @@
   .section-main h1 {
     font-size: 50px;
     line-height: 60px;
+  }
+
+  /* services */
+  .Services-heading h2 {
+    font-size: 3rem;
   }
   /* about section  */
   .about .about-box {
