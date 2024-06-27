@@ -1517,6 +1517,12 @@ select:focus {
 
 /**************** footer  ***************/
 .footer {
+  background-image: url(../asstes/footerbg1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+ background-position: center;
+  /* height: auto; */
   position: relative;
 }
 .footer .grid {
@@ -1524,20 +1530,21 @@ select:focus {
 }
 .footer .footer-left p {
   font-size: 1.5rem;
+  color: var(--white-color);
 }
 
 .footer .footer-right h3 {
   font-size: 3rem;
-  color: var(--black-color);
+  color: var(--white-color);
 }
 .footer .footer-center h3 {
   font-size: 3rem;
-  color: var(--black-color);
+  color: var(--white-color);
 }
 
 .footer .footer-center a {
   text-decoration: none;
-  color: var(--black-color);
+  color: var(--white-color);
   font-size: 1.5rem;
   margin: 2rem 0;
   -webkit-transition: 0.3s ease-in-out;
@@ -1550,7 +1557,7 @@ select:focus {
 }
 .footer .footer-right a {
   text-decoration: none;
-  color: var(--black-color);
+  color: var(--white-color);
   font-size: 1.5rem;
   margin: 2rem 0;
   -webkit-transition: 0.3s ease-in-out;
